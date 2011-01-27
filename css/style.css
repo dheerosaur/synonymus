@@ -36,198 +36,265 @@ hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 
 input, select { vertical-align:middle; }
 /* END RESET CSS */
 
-body { font:13px/1.231 sans-serif; *font-size:small; }
+body { font:13px/1.231 sans-serif; *font-size:small; } 
 select, input, textarea, button { font:99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
-/* 
- * minimal base styles 
- */
-
-body, select, input, textarea { 
-  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
-  color: #444; 
-  /* set your base font here, to apply evenly */
-  /* font-family: Georgia, serif;  */   
+body, select, input, textarea { color: #444;
+  /*put default fonts here*/
 }
-
-/* Headers (h1,h2,etc) have no default font-size or margin,
-   you'll want to define those yourself. */ 
 h1,h2,h3,h4,h5,h6 { font-weight: bold; }
-
-/* always force a scrollbar in non-IE */ 
+h1 { font-size: 36px; }
+h2 { font-size: 24px; }
+h3, h4, h5, h6 { font-size: 18px; }
 html { overflow-y: scroll; }
- 
-/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: none; }
 
+a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
 ul, ol { margin-left: 1.8em; }
 ol { list-style-type: decimal; }
 
-/* Remove margins for navigation lists */
 nav ul, nav li { margin: 0; } 
-
 small { font-size: 85%; }
 strong, th { font-weight: bold; }
-
 td, td img { vertical-align: top; } 
-
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
-
-pre { 
-  padding: 15px; 
-  
-  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-  white-space: pre; /* CSS2 */
-  white-space: pre-wrap; /* CSS 2.1 */
-  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-  word-wrap: break-word; /* IE */
-}
- 
-textarea { overflow: auto; } /* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-
-.ie6 legend, .ie7 legend { margin-left: -7px; } /* thnx ivannikolic! */
-
-/* align checkboxes, radios, text inputs with their label
-   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+pre {  padding: 15px;  white-space: pre;  white-space: pre-wrap;  white-space: pre-line;  word-wrap: break-word; }
+textarea { overflow: auto; } 
 input[type="radio"] { vertical-align: text-bottom; }
 input[type="checkbox"] { vertical-align: bottom; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
-
-/* hand cursor on clickable input elements */
 label, input[type=button], input[type=submit], button { cursor: pointer; }
- 
-/* webkit browsers add a 2px margin outside the chrome of form elements */  
 button, input, select, textarea { margin: 0; }
-
-/* colors for form validity */
 input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid { 
-      border-radius: 1px;
-    -moz-box-shadow: 0px 0px 5px red; 
- -webkit-box-shadow: 0px 0px 5px red; 
-         box-shadow: 0px 0px 5px red;
-}
+input:invalid, textarea:invalid { border-radius: 1px;  
+  -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red;  box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, 
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-
-/* These selection declarations have to be separate.
-   No text-shadow: twitter.com/miketaylr/status/12228805301 
-   Also: hot pink. */
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
 ::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
-
-/*  j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color: #FF5E99; } 
 
-/* make buttons play nice in IE:    
-   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {  width: auto; overflow: visible; }
- 
-/* bicubic resizing for non-native sized IMG: 
-   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-.ie7 img { -ms-interpolation-mode: bicubic; }
+/* END minimal base styles */
 
-
-
-/* 
- * Non-semantic helper classes 
- */
-
-/* for image replacement */
-.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
-
-/* Hide for both screenreaders and browsers
-   css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden { display: none; visibility: hidden; } 
-
-/* Hide only visually, but have it available for screenreaders 
-   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
-.visuallyhidden { position: absolute !important;    
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px); }
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
-.clearfix:before, .clearfix:after {
-  content: "\0020"; display: block; height: 0; visibility: hidden;	
-} 
-
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden;	} 
 .clearfix:after { clear: both; }
-/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
 
-
-
-
-
-
  /* Primary Styles
-    Author: 
+    Author: Dheeraj Sayala
  */
 
+body { 
+  text-align: center;
+  font-family: ubuntu;
+  background: url("/images/body_bg.jpg") repeat fixed 0 0 #515254;
+}
+#container { 
+  width: 900px; margin: 0 auto;
+  margin-top: 20px;
+  background: url("/images/container_bg.jpg") repeat fixed 0 0 #DDDCDC;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 
+  -webkit-box-shadow: 4px 2px 6px rgba(12,12,12, 0.8), -4px -2px 6px rgba(12,12,12, 0.8);
+  -moz-box-shadow: 4px 2px 6px rgba(12,12,12, 0.8), -4px -2px 6px rgba(12,12,12, 0.8);
+  box-shadow: 4px 2px 6px rgba(12,12,12, 0.8), -4px -2px 6px rgba(12,12,12, 0.8);
+}
+header { height: 80px;
+  padding: 10px;
+  color: grey;
+  -webkit-box-shadow: 0 2px 2px rgba(80,110,110, 0.5);
+  -moz-box-shadow: 0 2px 2px rgba(80,110,110, 0.5);
+  box-shadow: 0 2px 2px rgba(80,110,110, 0.5);
+}
+h1 {
+  line-height: 40px;
+  font-family: Arial;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #777788;
+  text-shadow: 1px 1px 2px #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+h1:hover { 
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #666688;
+  text-shadow: 1px 1px 2px #fff;
+}
 
+#main { padding: 10px; }
 
+/* Outer boxes */
+.outer {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 2px rgba(60, 60, 60, 0.7);
+  -moz-box-shadow: 2px 2px 2px rgba(60, 60, 60, 0.7);
+  box-shadow: 2px 2px 2px rgba(60, 60, 60, 0.7);
+  text-align: center;
+}
 
+#question {
+  background-color: #87bfd4;
+  margin: 40px auto 0 auto;
+  width: 450px;
+  height: 105px;
 
+}
 
+#synwith {
+  color: #6677aa;
+  margin: 20px auto 20px auto;
+  font-size: 22px;
+    
+}
+.option {
+  background-color: lightgreen;
 
+  width: 380px;
+  height: 95px;
+}
+#op1 { float: left; margin-left: 30px; }
+#op2 { float: right; margin-right: 30px; }
+/* End outer boxes */
 
+/* Inner boxes */
+.inner {
+  position: relative;
+  float: left;
+  height: 100%;
+  -webkit-border-radius: 20px 20px;
+  -moz-border-radius: 20px 20px;
+  border-radius: 20px 20px;
 
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 
+#question .inner { width: 80%; } 
+.option .inner { width: 88%; }
 
+.option .inner:hover {
+  cursor: pointer;
+  background-color: #87bfd4;
+  -webkit-box-shadow: 3px 3px 3px rgba(60, 60, 60, 0.5);
+  -moz-box-shadow: 3px 3px 3px rgba(60, 60, 60, 0.5);
+  box-shadow: 3px 3px 3px rgba(60, 60, 60, 0.5);
 
+  -webkit-transform: scale(1.05) translateX(8px);
+  -moz-transform: scale(1.05) translateX(8px);
+  transform: scale(1.05) translateX(8px);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+}
+/* End Inner boxes */
 
+/* onlyone styling */
+.onlyone { 
+  position: absolute;
+  padding: 2px 0 0 4px;
+  height: 70px;
+  top: 10px; left: 10px;
+}
 
-/*
- * Media queries for responsive design
- * These follow after primary styles so they will successfully override. 
- */
+.inner h2 { 
+  line-height: 65px;
+  font-size: 40px;
+  width: 90%;
+  color: #666677;
+  text-shadow: 1px 1px 2px rgba(222, 222, 222, 0.6);
+  letter-spacing: 2px;
+}
+#question .inner h2 { font-size: 42px; }
+.inner p {
+  width: 90%;
+  padding: 0 10px;
+  line-height: 26px;
+  font-size: 16px;
+  text-align: left;
+  color: #777;
+}
+.meaning, .usage { display: none; }
+
+/* End onlybox styling */
+
+/* Hint Styling */
+.hint {
+  float: right;
+  height: 50%;
+  color: #777777;
+  letter-spacing: 1px;
+  font-size: 20px; 
+  line-height: 50px;
+text-shadow: 1px 1px 1px #bbb;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+
+  transition: all 0.2s ease-in-out;
+}
+.hint1 { 
+  -webkit-border-radius: 0 20px 0 0;
+  -moz-border-radius: 0 20px 0 0;
+  border-radius: 0 20px 0 0;
+  background-color: rgba(150, 150, 150, 0.2);
+
+}
+.hint2 { 
+  -webkit-border-radius: 0 0 20px 0;
+  -moz-border-radius: 0 0 20px 0;
+  border-radius: 0 0 20px 0;
+  background-color: rgba(150,150,150, 0.4);
+}
+
+#question .hint { width: 20%; }
+.option .hint { 
+  width: 12%; 
+  line-height: 40px;
+  font-size: 25px;
+}
+
+.hint:hover {
+  background: transparent;
+  font-weight: bold;
+  color: grey;
+}
+/* End Hint Styling */
+
+footer { color: #aaa; 
+  padding: 20px;
+  margin-top: 100px;
+}
 
 @media all and (orientation:portrait) { 
-  /* Style adjustments for portrait mode goes here */
   
 }
 
 @media all and (orientation:landscape) { 
-  /* Style adjustments for landscape mode goes here */
   
 }
 
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
-  
-  
-  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you
-     j.mp/textsizeadjust 
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+
 }
 
-/* 
- * print styles
- * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
- */
-@media print {
-  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
-  a, a:visited { color: #444 !important; text-decoration: underline; }
-  a:after { content: " (" attr(href) ")"; } 
-  abbr:after { content: " (" attr(title) ")"; }
-  .ir a:after { content: ""; }  /* Don't show links for images */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
-  tr, img { page-break-inside: avoid; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3{ page-break-after: avoid; }
-}
+
+
+	
+
+
 

@@ -1,10 +1,11 @@
-import cgi, os
+import os
 from google.appengine.api import users
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app, login_required
 from google.appengine.ext import db
 
+# main handler
 class MainPage(webapp.RequestHandler):
     " Handler for the home-page etc. "
     def get(self):

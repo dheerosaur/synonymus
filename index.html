@@ -11,53 +11,77 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Synonymus</title>
-  <meta name="description" content="Improve vocabulary with Symonyms">
+  <meta name="description" content="syn.onym.us helps you improve your vocabulary">
   <meta name="author" content="Dheeraj Sayala">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <!--
+  <link  href="//fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css" >
+  -->
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+  <script src="js/libs/modernizr-1.6.min.js"></script>
 </head>
 
 <body>
 
   <div id="container">
     <header>
-    <h1>Synonym(o)us</h1>
+    <h1>synonym.us</h1>
+    <p>improve your vocabulary</p>
     </header>
 
     <nav>
     </nav>
     
-    <div id="main">
-        <div id="que" class="question">
-            <p>Life</p>
-            <a href="">=</a>
-            <a href="">?</a>
+    <div id="main" class="clearfix">
+        <div id="question" class="outer">
+            <div id="qinner" class="inner">
+                <h2 id="qword" class="word onlyone">perplexity</h2>
+                <p id="qmeaning" class="meaning onlyone">1. the feeling of being confused or
+                    worried by something you can't understand. 2. Something that confuses</p>
+                <p id="qusage" class="usage onlyone">His comments have been a source of perplexity
+                    and debate</p>
+            </div>
+            <p id="qeq" class="hint hint1" href="">means</p>
+            <p id="qus" class="hint hint2" href="">usage</p>
         </div>
-
-        <div id="op1" class="option">
-            <p>Forty two</p>
-            <a href="">=</a>
-            <a href="">?</a>
+        <p id="synwith">
+        is synonymous with ?
+        </p>
+        <div id="op1" class="option outer">
+            <div id="op1inner" class="inner">
+                <h2 id="op1word" class="word onlyone">confusion</h2>
+            	<p id="op1meaning" class="meaning onlyone">a state of not being certain about what
+                    is happening, what you should do, what sth means, etc</p>
+            	<p id="op1usage" class="usage onlyone">To avoid confusion, the teams wore different
+                    colours.</p>
+            </div>
+            <p id="op1eq" class="hint hint1" href="">=</p>
+            <p id="op1us" class="hint hint2" href="">?</p>
         </div>
         
-        <div id="op2" class="option">
-            <p>Twenty two</p>
-            <a href="">=</a>
-            <a href="">?</a>
+        <div id="op2" class="option outer">
+            <div id="op2inner" class="inner">
+                <h2 id="op2word" class="word onlyone">normalcy</h2>
+            	<p id="op2meaning" class="meaning onlyone">a  situation where everything is normal
+                    or as you would expect it to be</p>
+            	<p id="op2usage" class="usage onlyone">They are hoping for a return to normality now
+                    that the war is over.</p>
+            </div>
+            <p id="op2eq" class="hint hint1" href="">=</p>
+            <p id="op2us" class="hint hint2" href="">?</p>
         </div>
     </div>
     
     <footer>
-    Created by Dheeraj Sayala
+        <p> designed and developed by <a href="#">Dheeraj Sayala</a></p>
     </footer>
   </div> <!--! end of #container -->
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
   
   <!-- scripts concatenated and minified via ant build script-->
